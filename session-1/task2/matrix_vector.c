@@ -16,5 +16,26 @@
     Store your answer in vector c
     Print your final answer
     */
+
+    for (int i = 0; i <= 3; i++)
+    {
+      for (int j = 0; j <= 3; j++)
+      {
+        a[i][j] = 1.0;
+        b[j] = 1.0;
+        c[i] = c[i] + (a[i][j] * b[j]);
+      }
+    }
+
+    printf("Matrix C...\n");
+    for (int i = 0; i <= 3; i++)
+    {
+      for (int j = 0; j <= 3; j++)
+      {
+        printf("%f ", c[i]);
+      }
+      printf("\n");
+    }
+
     return 0;
  }
