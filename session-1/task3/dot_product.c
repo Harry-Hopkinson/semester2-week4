@@ -23,6 +23,14 @@
     Store your answer in d
     print your final answer
     */
+      for (int k = 0; k < n; k++)
+      {
+         a[k] = k + 1.0;
+         b[k] = (k + 1.0) * 2.0;
+         d[0] += a[k] * b[k];
+      }
+
+      printf("Dot product: %f\n", d[0]);
 
     // explicit deallocation of heap memory before exit */
     free(a);
