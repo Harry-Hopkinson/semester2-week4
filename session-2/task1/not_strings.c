@@ -12,5 +12,9 @@ int main( void ) {
     printf("As string: %s\n",charString);   // normal behaviour
     printf("Length of string: %ld\n",sizeof(charString));   // includes silent character \O
 
+    char correctArray[6] = {'h','e','l','l','o','\0'};  // null terminator added
+    printf("Correct Array: %s\n",correctArray);   // normal behaviour
+    printf("Length of correct array: %ld\n",sizeof(correctArray));   // expected result
+
     return 0;
 }
