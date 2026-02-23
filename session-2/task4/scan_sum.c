@@ -12,17 +12,24 @@ int main( void ) {
 
     // print the output from scanf and the data values
     int answer;
+    printf("Num1: %d, Operator: %c, Num2: %d\n", num1, operator, num2);
     switch (operator)
     {
         case '+': // +
             answer = num1 + num2;
+            break;
         case '-': // -
             answer = num1 - num2;
+            break;
         case '*': // *
             answer = num1 * num2;
+            break;
         case '/': // /
             if (num2 == 0) answer = 0;
             else answer = num1 / num2;
+            break;
+            
+        default: break;
     }
 
     printf("Answer: %d\n", answer);
