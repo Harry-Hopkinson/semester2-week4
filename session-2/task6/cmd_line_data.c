@@ -15,9 +15,19 @@
 
 int main( int argc, char **argv ) {
     
-    /*
-    Your code
-    */
+    if(argc != 4)
+    {
+        printf("Usage: %s <integer> <string> <double>\n", argv[0]);
+        return 1;
+    }
 
+    int i = atoi(argv[1]);
+    char *s = argv[2];
+    double d = atof(argv[3]);
+
+    printf("Integer: %d\n", i);
+    printf("String: %s\n", s);
+    printf("Double: %f\n", d);
+    
     return 0;
 }

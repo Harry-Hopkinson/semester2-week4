@@ -14,12 +14,31 @@
 #include <stdio.h>
 #include <math.h>
 
-int main( int argc, char **argv ) {
+int main( int argc, char **argv )
+{
     double Pi = 3.1415926535897932;
 
     /*
     Your code
     */
+
+    if (argc != 2)
+    {
+        printf("Usage: %s <number of terms>\n", argv[0]);
+        return 1;
+    }
+
+    int n = atoi(argv[1]);
+    printf("Computing PI for %i terms\n", n);
+
+    float fractional_part = 0.0f;
+    for (int i = 0; i < n; i++)
+    {
+        fractional_part += pow(-1, i) / (2 * i + 1);
+    }
+
+    float answer = 4 * fractional_part;
+    printf("PI Calculated with %i terms is %f\n", n, answer);
 
     return 0;
 }
